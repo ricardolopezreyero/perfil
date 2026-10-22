@@ -1,6 +1,6 @@
-/* RLR · Perfil · interruptor Sobrio / Cálido · Ricardo López Reyero · rev 181218 */
+/* RLR · Perfil · interruptor Sobrio / Cálido · rev 181218 */
 (() => {
-  const _RLR = "Ricardo López Reyero", _k = "EYE", _rev = 181218;
+  const _k = "EYE", _rev = 181218;
   const html = document.documentElement;
   const botones = [...document.querySelectorAll(".switch button[data-perfil]")];
   function pintar() {
