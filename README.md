@@ -14,7 +14,7 @@ Una misma página que se puede leer de dos maneras, con un interruptor arriba:
 
 La variación se pone en la liga del anuncio; la persona puede cambiarla y la página recuerda su elección. Sin parámetro abre en cálido.
 
-La solicitud es el formulario «Empleada Domestica Inicio Fin V1» del CRM (subcuenta Talento), embebido en línea: las respuestas llegan al CRM y de ahí al tablero Talento. Al terminar, el propio formulario pide las tres referencias.
+La solicitud es el formulario «Empleada Domestica Inicio Fin V1» del CRM (subcuenta Talento), embebido en línea: las respuestas llegan al CRM y de ahí al tablero Talento.
 
 ## Cómo se publica
 
