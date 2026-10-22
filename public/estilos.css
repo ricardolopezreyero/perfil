@@ -1,0 +1,82 @@
+/* RLR · Perfil · dos maneras de contar el mismo puesto: sobrio (blanco y negro) y cálido · Ricardo López Reyero · rev 181218 */
+:root {
+  --fondo: #fff; --tinta: #0a0a0a; --tinta-2: #4a4a4a; --linea: #e4e4e4; --acento: #0a0a0a; --acento-texto: #fff;
+  --tarjeta: #fafafa; --radio: 6px; --fuente: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif; --titulo: var(--fuente);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+html[data-perfil="calido"] {
+  --fondo: #fbf7f0; --tinta: #1b2a4a; --tinta-2: #5a6378; --linea: #e8dcc6; --acento: #b8933f; --acento-texto: #fff;
+  --tarjeta: #fff; --radio: 16px;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--fuente); background: var(--fondo); color: var(--tinta); line-height: 1.6; -webkit-font-smoothing: antialiased; transition: background .4s var(--ease), color .4s var(--ease); }
+h1, h2, h3, p { margin: 0; }
+a { color: inherit; }
+.envoltura { max-width: 980px; margin: 0 auto; padding: 0 20px 80px; }
+
+/* El interruptor: dos maneras de leer lo mismo */
+.arriba { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 0; }
+.marca { font-weight: 800; letter-spacing: -.3px; text-decoration: none; font-size: .95rem; }
+.marca small { display: block; font-weight: 500; font-size: .72rem; color: var(--tinta-2); letter-spacing: 0; }
+.switch { display: inline-flex; border: 1px solid var(--linea); border-radius: 999px; padding: 3px; background: var(--tarjeta); }
+.switch button { border: 0; background: transparent; font: inherit; font-size: .8rem; font-weight: 700; color: var(--tinta-2); padding: 7px 14px; border-radius: 999px; cursor: pointer; transition: background .3s var(--ease), color .3s; min-height: 36px; }
+.switch button[aria-pressed="true"] { background: var(--acento); color: var(--acento-texto); }
+
+/* Portada */
+.portada { padding: 56px 0 36px; text-align: center; }
+.eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--tinta-2); margin-bottom: 14px; }
+.portada h1 { font-size: clamp(2.4rem, 7vw, 4.6rem); font-weight: 800; line-height: .98; letter-spacing: -2px; text-transform: uppercase; }
+.portada .bajada { font-size: clamp(1.15rem, 2.6vw, 1.6rem); font-weight: 600; margin-top: 14px; letter-spacing: -.3px; }
+.portada .lugar { margin-top: 18px; color: var(--tinta-2); font-size: .95rem; }
+.cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 28px; min-height: 52px; padding: 0 28px; border-radius: var(--radio); background: var(--acento); color: var(--acento-texto); text-decoration: none; font-weight: 800; font-size: 1rem; transition: transform .25s var(--ease), box-shadow .25s; }
+.cta:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.14); }
+html[data-perfil="calido"] .portada h1 { text-transform: none; letter-spacing: -1.5px; }
+html[data-perfil="calido"] .portada h1 em { color: var(--acento); font-style: italic; }
+html[data-perfil="bn"] .portada h1 em { font-style: normal; }
+
+/* Tres columnas: actividades, horario, ofrecemos */
+.tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; }
+.bloque { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: var(--radio); padding: 22px 22px 18px; }
+.bloque h2 { font-size: .74rem; letter-spacing: 1.8px; text-transform: uppercase; font-weight: 800; color: var(--tinta-2); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.bloque h2 i { width: 8px; height: 8px; border-radius: 50%; background: var(--acento); display: inline-block; }
+.bloque ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+.bloque li { display: flex; gap: 10px; align-items: flex-start; font-size: 1rem; }
+.bloque li::before { content: "—"; color: var(--acento); font-weight: 800; flex: none; }
+html[data-perfil="calido"] .bloque li::before { content: "✓"; }
+
+/* La casa */
+.casa { margin-top: 40px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: start; }
+.casa h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.8px; line-height: 1.15; }
+.casa p { margin-top: 12px; color: var(--tinta-2); font-size: 1.02rem; }
+.casa .datos { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: var(--radio); padding: 20px 22px; display: grid; gap: 10px; }
+.casa .dato { display: grid; grid-template-columns: 1fr auto; gap: 12px; font-size: .95rem; border-top: 1px solid var(--linea); padding-top: 10px; }
+.casa .dato:first-child { border-top: 0; padding-top: 0; }
+.casa .dato b { font-weight: 700; }
+.casa .dato span { color: var(--tinta-2); }
+
+/* Confianza */
+.confianza { margin-top: 36px; border: 1px solid var(--linea); border-radius: var(--radio); padding: 18px 22px; background: var(--tarjeta); color: var(--tinta-2); font-size: .92rem; display: flex; gap: 14px; align-items: flex-start; }
+.confianza b { color: var(--tinta); }
+.confianza svg { flex: none; width: 22px; height: 22px; color: var(--acento); margin-top: 2px; }
+
+/* Formulario: la solicitud se llena aquí mismo */
+.solicitud { margin-top: 56px; scroll-margin-top: 20px; }
+.solicitud .cab { text-align: center; margin-bottom: 18px; }
+.solicitud h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -1px; }
+.solicitud p { color: var(--tinta-2); margin-top: 8px; }
+.marco { background: #fff; border: 1px solid var(--linea); border-radius: var(--radio); overflow: hidden; padding: 6px; }
+html[data-perfil="bn"] .marco { border-color: #0a0a0a; }
+.marco iframe { display: block; width: 100%; border: 0; min-height: 900px; }
+.aviso-form { text-align: center; font-size: .82rem; color: var(--tinta-2); margin-top: 12px; }
+.aviso-form a { font-weight: 700; }
+
+.pie { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--linea); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .8rem; color: var(--tinta-2); }
+
+@media (max-width: 760px) {
+  .tres, .casa { grid-template-columns: 1fr; }
+  .portada { padding: 36px 0 24px; }
+  .arriba { padding: 14px 0; }
+  .marco { padding: 0; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
