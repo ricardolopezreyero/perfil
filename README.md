@@ -16,6 +16,10 @@ La variación se pone en la liga del anuncio; la persona puede cambiarla y la p�
 
 La solicitud es el formulario «Empleada Domestica Inicio Fin V1» del CRM (subcuenta Talento), embebido en línea: las respuestas llegan al CRM y de ahí al tablero Talento.
 
+## Masajista a domicilio
+
+`https://perfil.capitaltorreon.com/masajista-a-domicilio`, una sola lectura (cálida, como el anuncio). Requisitos, perfil y especialidades tal cual el anuncio, y la solicitud es el formulario «Masajista Torreón V1» del CRM.
+
 ## Cómo se publica
 
 Worker de Cloudflare solo con archivos estáticos (`public/`), dominio `perfil.capitaltorreon.com`.
