@@ -29,6 +29,10 @@ a { color: inherit; }
 .portada h1 { font-size: clamp(2.4rem, 7vw, 4.6rem); font-weight: 800; line-height: .98; letter-spacing: -2px; text-transform: uppercase; }
 .portada .bajada { font-size: clamp(1.15rem, 2.6vw, 1.6rem); font-weight: 600; margin-top: 14px; letter-spacing: -.3px; }
 .portada .lugar { margin-top: 18px; color: var(--tinta-2); font-size: .95rem; }
+.pin { display: inline-flex; align-items: center; gap: 8px; margin: 6px 0 10px; padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--acento); color: var(--tinta); font-weight: 800; font-size: clamp(1rem, 2.2vw, 1.2rem); letter-spacing: -.2px; background: var(--tarjeta); }
+.pin svg { width: 20px; height: 20px; color: var(--acento); flex: none; }
+html[data-perfil="calido"] .pin { background: var(--acento); color: var(--acento-texto); border-color: var(--acento); }
+html[data-perfil="calido"] .pin svg { color: var(--acento-texto); }
 .cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 28px; min-height: 52px; padding: 0 28px; border-radius: var(--radio); background: var(--acento); color: var(--acento-texto); text-decoration: none; font-weight: 800; font-size: 1rem; transition: transform .25s var(--ease), box-shadow .25s; }
 .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.14); }
 html[data-perfil="calido"] .portada h1 { text-transform: none; letter-spacing: -1.5px; }
